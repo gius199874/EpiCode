@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Recon-ng Reconnaissance Report</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+function showhide(id) {
+    obj = document.getElementById(id);
+    hide = document.getElementById("hide-" + id);
+    show = document.getElementById("show-" + id);
+    if (obj.style.display == "none") {
+        show.removeAttribute('style');
+        hide.removeAttribute('style');
+        obj.removeAttribute('style');
+    } else {
+        obj.style.display = "none";
+        hide.style.display = "none";
+        show.style.display = "inline";
+    }
+}
+function start() {
+    tables = document.getElementsByName("table");
+    for (i = 0; i < tables.length; ++i) {
+        showhide(tables[i].id);
+    }
+}
+</script>
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .75em;
+}
+.main {
+    width: 1000px;
+    padding: 0 10px;
+    /*text-align: center;*//*centers all the elements on the page*/
+    display: table;
+    margin: 0 auto;
+    border: 2px solid gray;
+    position: relative;
+}
+.title {
+    font-size: 3em;
+}
+.subtitle {
+    font-size: 2em;
+}
+.link {
+    font-size: 1em;
+    position: absolute;
+    right: 12px;
+    top: 5px;
+}
+p {
+    margin: 5px 7px 5px 7px;
+}
+table, div {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+.container {
+    display:inline-block;
+    text-align: left; /*left justifies the table caption*/
+    border: 2px solid gray;
+    margin: 0 0 10px 0;
+    width: 100%; /*expands tables all the way across*/
+}
+table {
+    border-spacing: 10px 5px;
+    margin: -5px auto 5px auto;
+    text-align: left;
+}
+th {
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+.leak {
+    margin: 10px 0;
+}
+a[id*="-"] {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.25em;
+}
+a[id*="show-"] {
+    display: none;
+}
+.footer {
+    text-align: center;
+}
+.centered {
+    text-align: center;
+}
+</style>
+</head>
+<body onload="start();">
+    <div class="main">
+        <div class='title'>epicode</div>
+        <div class='subtitle'>Recon-ng Reconnaissance Report</div>
+        <div class='link'><a href='http://www.recon-ng.com' target="_blank">www.recon-ng.com</a></div>
+        <hr>
+        <div>
+<!-- START -->
+<div class="container">
+<a id="show-summary" href="javascript:showhide('summary');"><p>[+] Summary</p></a>
+<a id="hide-summary" href="javascript:showhide('summary');"><p>[-] Summary</p><hr></a>
+<table id="summary">
+<tr><th>table</th><th>count</th></tr>
+<tr><td>domains</td><td class="centered">0</td></tr>
+<tr><td>companies</td><td class="centered">0</td></tr>
+<tr><td>netblocks</td><td class="centered">0</td></tr>
+<tr><td>locations</td><td class="centered">0</td></tr>
+<tr><td>vulnerabilities</td><td class="centered">0</td></tr>
+<tr><td>ports</td><td class="centered">0</td></tr>
+<tr><td>hosts</td><td class="centered">41</td></tr>
+<tr><td>contacts</td><td class="centered">0</td></tr>
+<tr><td>credentials</td><td class="centered">0</td></tr>
+<tr><td>leaks</td><td class="centered">0</td></tr>
+<tr><td>pushpins</td><td class="centered">0</td></tr>
+<tr><td>profiles</td><td class="centered">0</td></tr>
+<tr><td>repositories</td><td class="centered">0</td></tr>
+</table>
+</div><br />
+<div class="container">
+<a id="show-hosts" href="javascript:showhide('hosts');"><p>[+] Hosts</p></a>
+<a id="hide-hosts" href="javascript:showhide('hosts');"><p>[-] Hosts</p><hr></a>
+<table name="table" id="hosts">
+<tr><th>host</th><th>ip_address</th><th>region</th><th>country</th><th>latitude</th><th>longitude</th><th>notes</th><th>module</th></tr>
+<tr><td>ai.epicode.com</td><td>52.58.104.103</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ai.epicode.com</td><td>18.198.160.4</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ai.epicode.com</td><td>52.28.100.134</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ai.epicode.com</td><td>3.123.78.61</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>aplosites.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>apollo.epicode.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>apollo.epicode.com</td><td>34.133.35.236</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>apollo.epicode.com</td><td>35.224.255.158</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>app.epicode.com</td><td>3.160.212.81</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>app.epicode.com</td><td>3.160.212.53</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>app.epicode.com</td><td>3.160.212.2</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>app.epicode.com</td><td>3.160.212.85</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>auth.epicode.com</td><td>128.140.65.97</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>certificates.epicode.com</td><td>13.226.175.32</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>certificates.epicode.com</td><td>13.226.175.118</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>certificates.epicode.com</td><td>13.226.175.49</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>certificates.epicode.com</td><td>13.226.175.98</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>cms.epicode.com</td><td>52.58.8.122</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>cms.epicode.com</td><td>18.158.255.147</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>cname.vercel-dns.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>demo.epicode.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>demo.epicode.com</td><td>216.150.16.65</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>demo.epicode.com</td><td>216.150.1.65</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>demo.epicode.com</td><td>216.150.1.129</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>demo.epicode.com</td><td>216.150.16.129</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>dev1.epicode.com</td><td>35.152.77.215</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ee363edf7c1fd926.vercel-dns-016.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>epicode.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>internal.epicode.com</td><td>128.140.65.97</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>kb.epicode.com</td><td>108.157.194.116</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>kb.epicode.com</td><td>108.157.194.122</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>kb.epicode.com</td><td>108.157.194.111</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>kb.epicode.com</td><td>108.157.194.8</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ml.epicode.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ml.epicode.com</td><td>66.33.60.194</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ml.epicode.com</td><td>76.76.21.98</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ml.epicode.com</td><td>76.76.21.142</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>ml.epicode.com</td><td>76.76.21.164</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>modern-cheetah.aplosites.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>www.epicode.com</td><td></td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+<tr><td>www.epicode.com</td><td>35.207.141.200</td><td></td><td></td><td></td><td></td><td></td><td>brute_hosts</td></tr>
+</table>
+</div><br />
+
+<!-- END -->
+        </div>
+        <hr>
+        <p class="footer">Created by: giuseppe<br />Mon, Sep 15 2025 18:44:11</p>
+    </div>
+</body>
+</html>
